@@ -1,26 +1,72 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar/Navbar';
+import { BrowserRouter, Link, Route } from 'react-router-dom';
+import Context from './Context/Context';
+import Home from './Pages/Home/Home';
+import About from './Pages/About/About';
+import Projects from './Pages/Projects/Projects';
+import Contact from './Pages/Contact/Contact';
+import Footer from './Components/Navbar/Footer/Footer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+  state = {
+    openNav: false,
+  };
+
+  onOpenNav = () => {
+    console.log('open');
+    this.setState((prevState) => {
+      return {
+        openNav: !prevState.openNav,
+      };
+    });
+  };
+
+  closeNav = () => {
+    this.setState({ openNav: false });
+  };
+
+  render() {
+    const contextVal = {
+      onOpenNav: this.onOpenNav,
+      openNav: this.state.openNav,
+    };
+
+    return (
+      <BrowserRouter>
+        <Context.Provider value={contextVal}>
+          <div className='App'>
+            <Navbar onOpenNav={this.onOpenNav} closeNav={this.closeNav} />
+            {this.state.openNav ? (
+              <div className='nav-links-wrapper' onClick={this.onOpenNav}>
+                <Link to='/' key='0' className='nav-link'>
+                  Home
+                </Link>
+
+                <Link to='/about' key='1' className='nav-link'>
+                  About
+                </Link>
+
+                <Link to='/projects' key='2' className='nav-link'>
+                  Projects
+                </Link>
+
+                <Link to='/contact' key='3' className='nav-link'>
+                  Contact
+                </Link>
+              </div>
+            ) : null}
+
+            <Route path='/' exact component={Home} />
+            <Route path='/about' exact component={About} />
+            <Route path='/projects' exact component={Projects} />
+            <Route path='/contact' exact component={Contact} />
+
+            <Footer />
+          </div>
+        </Context.Provider>
+      </BrowserRouter>
+    );
+  }
 }
-
-export default App;
