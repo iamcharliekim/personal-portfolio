@@ -10,12 +10,11 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  /* background-color: rgb(29, 30, 34); */
-  margin: 0 auto;
-  background: linear-gradient(rgba(29, 30, 34, 0.95), rgba(29, 30, 34, 0.6)), url(./images/motherboard.jpg);
-  background-position: center;
-  background-size: cover;
-  color: white;
+  margin: 0;
+  /* background             : linear-gradient(rgba(29, 30, 34, 0.95), rgba(29, 30, 34, 0.2)), url(./images/motherboard.jpg);
+  background-position       : center;
+  background-size           : cover;
+  color                     : white; */
 }
 
 code {

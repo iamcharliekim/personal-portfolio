@@ -9,10 +9,6 @@ export default class About extends React.Component {
     return (
       <div className={styles['About']}>
         <div className={styles['bio']}>
-          <header>
-            <h1>About</h1>
-          </header>
-
           <h2>I am an aspiring Full Stack Web Developer currently based in the Washington D.C. area.</h2>
 
           <h3>I specialize in designing and building interactive user interfaces that are conducive to a stimulating and engaging user experience.</h3>
