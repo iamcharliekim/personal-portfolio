@@ -1,16 +1,21 @@
+* {
+  box-sizing: border-box
+}
+
 html {
-  height: 100%;
+  height  : 100%;
   position: relative;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-family            : -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing : antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  margin: 0;
+  width                  : 100%;
+  height                 : 100%;
+  position               : relative;
+  margin                 : 0;
+
   /* background             : linear-gradient(rgba(29, 30, 34, 0.95), rgba(29, 30, 34, 0.2)), url(./images/motherboard.jpg);
   background-position       : center;
   background-size           : cover;
@@ -19,4 +24,14 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+button {
+  margin-right   : 10px;
+  /* box-shadow  : 0px 1px 1px #888; */
+  padding        : 10px;
+  font-size      : 16px;
+  cursor         : pointer;
+  outline        : none;
+  background     : white
 }

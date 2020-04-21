@@ -7,12 +7,12 @@ export default class ProjectCard extends React.Component {
         <div className={styles['project-name']}>{this.props.name}</div>
 
         <div className={styles['project-img-wrapper']}>
-          <img src={require(`../../../src/images/${this.props.img}`)} />
+          <img src={require(`../../../src/images/${this.props.img}`)} alt='project-screenshot'/>
         </div>
 
         <div className={styles['project-tech-wrapper']}>
           {this.props.tech.map((tech, i) => (
-            <img src={require(`../../../src/images/${tech}.svg`)} key={i} />
+            <img src={require(`../../../src/images/${tech}.svg`)} key={i} alt={`${tech}-icon`}/>
           ))}
         </div>
       </div>

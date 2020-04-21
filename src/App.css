@@ -1,31 +1,35 @@
 .App {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  width          : 100%;
+  min-height     : 100vh;
+  overflow       : hidden;
+  display        : flex;
+  flex-direction : column;
   justify-content: flex-start;
-  align-items: center;
+  align-items    : center;
+  position       : relative;
 }
 
 .nav-links-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  width           : 100%;
+  height          : 100vh;
+  display         : flex;
+  flex-direction  : column;
+  justify-content : flex-start;
+  align-items     : center;
   background-color: #011627;
-  color: white;
-  text-align: center;
+  color           : white;
+  text-align      : center;
+  position        : absolute;
+  top             : 52px
 }
 
 .nav-links-wrapper .nav-link {
-  width: 100%;
-  color: white;
+  width          : 100%;
+  color          : white;
   text-decoration: none;
-  font-size: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid white;
+  font-size      : 20px;
+  padding-top    : 20px;
+  padding-bottom : 20px;
+  border-bottom  : 1px solid white;
+  border-top     : 1px solid white
 }
