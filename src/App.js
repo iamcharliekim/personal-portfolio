@@ -12,6 +12,7 @@ import Footer from './Components/Footer/Footer';
 export default class App extends React.Component {
   state = {
     openNav: false,
+    showToast: true,
   };
 
   onOpenNav = () => {
@@ -26,10 +27,16 @@ export default class App extends React.Component {
     this.setState({ openNav: false });
   };
 
+  hideToast = () => {
+    this.setState({ showToast: false });
+  };
+
   render() {
     const contextVal = {
       onOpenNav: this.onOpenNav,
       openNav: this.state.openNav,
+      hideToast: this.hideToast,
+      showToast: this.state.showToast,
     };
 
     return (

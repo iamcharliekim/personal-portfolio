@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Contact.module.css';
 import Context from '../../Context/Context';
+import ToastAlert from '../../Components/ToastAlert/ToastAlert';
 
 export default class Contact extends React.Component {
   static contextType = Context;
@@ -9,6 +10,10 @@ export default class Contact extends React.Component {
     name: '',
     email: '',
     message: '',
+    success: null,
+    error: null,
+    status: null,
+    statusMsg: null,
   };
 
   nameHandler = (e) => {
@@ -24,16 +29,21 @@ export default class Contact extends React.Component {
   };
 
   resetForm = () => {
-    this.setState({ name: '', email: '', message: '' });
+    this.setState({ name: '', email: '', message: '', success: null, error: null });
   };
 
   onSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+
+    const message = {
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message,
+    };
 
     fetch('http://localhost:8000/send', {
       method: 'POST',
-      body: JSON.stringify(this.state),
+      body: JSON.stringify(message),
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
@@ -42,22 +52,34 @@ export default class Contact extends React.Component {
       .then((response) => response.json())
       .then((response) => {
         if (response.status === 'success') {
-          alert('Message Sent.');
-          this.resetForm();
+          this.setState({ success: true, status: 'success', statusMsg: 'Your message has been sent!' });
+
+          setTimeout(() => this.resetForm(), 3000);
         } else if (response.status === 'fail') {
-          alert('Message failed to send.');
+          this.setState({ error: true, status: 'error', statusMsg: 'Your message was not sent!' });
         }
+      })
+      .catch((error) => {
+        console.log(error);
       });
+  };
+
+  clearErrorMsg = () => {
+    if (this.state.error) {
+      this.setState({ error: null });
+    }
   };
 
   render() {
     return (
       <div className={styles['Contact']}>
-        <form id={styles['contact-form']} onSubmit={this.onSubmit} method='POST'>
-          <input type='text' onChange={this.nameHandler} value={this.state.name} placeholder='Full Name' />
-          <input type='email' onChange={this.emailHandler} value={this.state.email} placeholder='Email' />
+        {(this.state.success || this.state.error) && this.context.showToast ? <ToastAlert status={this.state.status} statusMsg={this.state.statusMsg} /> : null}
 
-          <textarea onChange={this.messageHandler} rows='8' cols='70' value={this.state.message} placeholder='Your Message' />
+        <form id={styles['contact-form']} onSubmit={this.onSubmit} method='POST'>
+          <input type='text' onChange={this.nameHandler} value={this.state.name} placeholder='Full Name' onFocus={this.clearErrorMsg} />
+          <input type='email' onChange={this.emailHandler} value={this.state.email} placeholder='Email' onFocus={this.clearErrorMsg} />
+
+          <textarea onChange={this.messageHandler} rows='8' cols='70' value={this.state.message} placeholder='Your Message' onFocus={this.clearErrorMsg} />
 
           <button className={styles['send-btn']}>SEND</button>
         </form>

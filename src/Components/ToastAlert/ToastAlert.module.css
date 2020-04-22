@@ -1,0 +1,66 @@
+.ToastAlert {
+    margin-top: 30px;
+    position  : relative;
+}
+
+.ToastAlertSuccess {
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+    align-items     : flex-start;
+    padding         : 15px;
+    margin-bottom   : 10px;
+    background-color: blue;
+    color           : white
+}
+
+.ToastAlertError {
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+    align-items     : flex-start;
+    padding         : 15px;
+    margin-bottom   : 10px;
+    background-color: red;
+    color           : white
+}
+
+.toast-inner-wrapper {
+    width          : 100%;
+    display        : flex;
+    justify-content: flex-start;
+    align-items    : center;
+    position       : relative;
+}
+
+.status-icon {
+    font-size   : 25px;
+    margin-right: 10px
+}
+
+.toast-msg {
+    display        : flex;
+    flex-direction : column;
+    justify-content: flex-start;
+    align-items    : flex-start;
+    margin-left    : 5px;
+    margin-right   : 5px;
+}
+
+.toast-msg h3 {
+    font-size    : 16px;
+    margin-top   : 0;
+    margin-bottom: 5px
+}
+
+.status-msg {
+    font-size: 12px
+}
+
+.exit-icon {
+    position : absolute;
+    right    : 0;
+    top      : 0;
+    color    : white;
+    font-size: 15px
+}
