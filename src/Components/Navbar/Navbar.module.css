@@ -7,16 +7,19 @@
   background-color: #0a1128;
   color: white;
   position: relative;
+  margin-bottom: 50px;
+  padding: 30px;
+  position: relative;
 }
 
 .inner-nav {
   width: 80%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 0;
   margin: 5px 10px;
-  max-width: 800px;
+  max-width: 600px;
 }
 
 .logo {
@@ -127,11 +130,11 @@
   }
 
   .nav-links-wrapper {
-    width: 40%;
+    width: 35%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 0;
+    margin-right: 20px;
   }
 
   .nav-link {

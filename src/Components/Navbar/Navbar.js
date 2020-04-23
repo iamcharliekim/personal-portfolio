@@ -11,9 +11,6 @@ class Navbar extends React.Component {
     let navLinks;
 
     navLinks = [
-      <Link to='/' key='0' className={styles['nav-link']}>
-        Home
-      </Link>,
       <Link to='/about' key='3' className={styles['nav-link']}>
         About
       </Link>,
@@ -36,7 +33,7 @@ class Navbar extends React.Component {
 
           <div className={styles['nav-links-wrapper']}>{navLinks.map((link) => link)}</div>
 
-          <div className={styles['nav-icons-wrapper']}>
+          {/* <div className={styles['nav-icons-wrapper']}>
             <a href='mailto:cwkim3@gmail.com'>
               <FontAwesomeIcon icon={faEnvelope} className={styles['icon']} />
             </a>
@@ -48,8 +45,7 @@ class Navbar extends React.Component {
             <a href='https://www.linkedin.com/in/charleswkim/' target='_blank' rel='noopener noreferrer'>
               <FontAwesomeIcon icon={faLinkedin} className={styles['icon']} />
             </a>
-          </div>
-
+          </div> */}
           <div className={styles['hamburger']} onClick={this.props.onOpenNav}>
             <div />
             <div />

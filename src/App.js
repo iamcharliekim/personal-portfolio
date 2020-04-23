@@ -8,6 +8,7 @@ import About from './Pages/About/About';
 import Projects from './Pages/Projects/Projects';
 import Contact from './Pages/Contact/Contact';
 import Footer from './Components/Footer/Footer';
+import Sidebar from './Components/Sidebar/Sidebar';
 
 export default class App extends React.Component {
   state = {
@@ -63,6 +64,8 @@ export default class App extends React.Component {
                 </Link>
               </div>
             ) : null}
+
+            <Sidebar />
 
             <Route path='/' exact component={Home} />
             <Route path='/about' exact component={About} />

@@ -1,0 +1,28 @@
+.Sidebar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .Sidebar {
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    padding: 10px 2px;
+    width: 30px;
+  }
+
+  .Sidebar a {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .Sidebar a .icon {
+    color: #403f4c;
+    font-size: 20px;
+  }
+}
