@@ -1,27 +1,26 @@
 .Contact {
-  width         : 80%;
-  max-width     : 500px;
+  width: 80%;
+  max-width: 500px;
   padding-bottom: 50px;
-  margin-top    : 40px
+  margin-top: 40px;
 }
 
 form {
-  width          : 100%;
-  display        : flex;
-  flex-direction : column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items    : flex-start;
+  align-items: flex-start;
 }
 
 input,
 textarea {
-  width        : 100%;
+  width: 100%;
   margin-bottom: 10px;
-  padding      : 10px;
-  resize       : none;
-  border       : 1px solid lightgray;
-  font-size    : 16px;
-
+  padding: 10px;
+  resize: none;
+  border: 1px solid lightgray;
+  font-size: 16px;
 }
 
 button.send-btn {

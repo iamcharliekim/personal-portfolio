@@ -1,66 +1,66 @@
 .ToastAlert {
-    margin-top: 30px;
-    position  : relative;
+  margin-top: 30px;
+  position: relative;
 }
 
 .ToastAlertSuccess {
-    display         : flex;
-    flex-direction  : column;
-    justify-content : space-between;
-    align-items     : flex-start;
-    padding         : 15px;
-    margin-bottom   : 10px;
-    background-color: blue;
-    color           : white
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #157f1f;
+  color: white;
 }
 
 .ToastAlertError {
-    display         : flex;
-    flex-direction  : column;
-    justify-content : space-between;
-    align-items     : flex-start;
-    padding         : 15px;
-    margin-bottom   : 10px;
-    background-color: red;
-    color           : white
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #b80c09;
+  color: white;
 }
 
 .toast-inner-wrapper {
-    width          : 100%;
-    display        : flex;
-    justify-content: flex-start;
-    align-items    : center;
-    position       : relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
 }
 
 .status-icon {
-    font-size   : 25px;
-    margin-right: 10px
+  font-size: 25px;
+  margin-right: 10px;
 }
 
 .toast-msg {
-    display        : flex;
-    flex-direction : column;
-    justify-content: flex-start;
-    align-items    : flex-start;
-    margin-left    : 5px;
-    margin-right   : 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .toast-msg h3 {
-    font-size    : 16px;
-    margin-top   : 0;
-    margin-bottom: 5px
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .status-msg {
-    font-size: 12px
+  font-size: 14px;
 }
 
 .exit-icon {
-    position : absolute;
-    right    : 0;
-    top      : 0;
-    color    : white;
-    font-size: 15px
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: white;
+  font-size: 15px;
 }

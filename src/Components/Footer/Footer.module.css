@@ -1,29 +1,30 @@
 footer {
-  color           : white;
-  font-size       : 14px;
-  display         : flex;
-  justify-content : space-between;
-  align-items     : center;
-  width           : 100%;
-  margin          : 10px auto;
-  background-color: #011627;
-  padding         : 10px;
-  margin-bottom   : 0;
-  position        : absolute;
-  bottom          : 0;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 10px auto;
+  background-color: #0a1128;
+  color: white;
+  padding: 10px;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 0;
 }
 
 .footer-links {
-  margin-left    : 0;
-  display        : flex;
+  margin-left: 0;
+  display: flex;
   justify-content: space-around;
-  align-items    : center;
-  list-style     : none;
-  margin-bottom  : 10px;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 10px;
 }
 
 .footer-links li a {
-  color : white;
+  color: white;
   margin: 0 10px;
 }
 
