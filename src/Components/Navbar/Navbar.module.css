@@ -7,13 +7,13 @@
   background-color: #0a1128;
   color: white;
   position: relative;
-  margin-bottom: 50px;
-  padding: 30px;
+  margin-bottom: 40px;
+  padding: 10px;
   position: relative;
 }
 
 .inner-nav {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;

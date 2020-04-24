@@ -1,7 +1,8 @@
 .Contact {
   width: 80%;
   max-width: 500px;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 form {
@@ -24,4 +25,25 @@ textarea {
 
 button.send-btn {
   width: 100%;
+}
+
+.contact-icons {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-icons a {
+  margin: 5px;
+  padding: 5px;
+}
+
+.contact-icons a .icon {
+  color: #0a1128;
+  font-size: 30px;
 }
