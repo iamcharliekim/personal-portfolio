@@ -18,7 +18,9 @@
 ],
   "settings": {
 	"editor.formatOnSave": true,
+	"prettier.singleQuote": true,
+	"javascript.preferences.quoteStyle": "single",
 	"prettier.jsxSingleQuote": true,
-	"prettier.singleQuote": true
+	"typescript.preferences.quoteStyle": "single"
   }
 }
