@@ -16,3 +16,30 @@
   align-items: center;
   justify-content: flex-start;
 }
+
+@media (min-width: 1200px) {
+  .Projects {
+    width: 80%;
+    padding-bottom: 60px;
+    margin-bottom: 40px;
+    max-width: none;
+  }
+
+  .project-grid-wrapper {
+    display: none;
+  }
+
+  .project-row-1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .project-row-2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}

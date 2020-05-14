@@ -1,26 +1,30 @@
 {
   "folders": [
-	{
-		"path": "../../../../portfolio-final"
-	},
-	{
-		"path": "../../.."
-	},
-	{
-		"path": "../../../../metrocleaners-app/metrocleaners-client"
-	},
-	{
-		"path": "../../../../contact-api"
-	},
-	{
-		"path": "../../../../metrocleaners-app/metrocleaners-api"
-	}
-],
+    {
+      "path": "../../../../portfolio-final"
+    },
+    {
+      "path": "../../.."
+    },
+    {
+      "path": "../../../../metrocleaners-app/metrocleaners-client"
+    },
+    {
+      "path": "../../../../contact-api"
+    },
+    {
+      "path": "../../../../metrocleaners-app/metrocleaners-api"
+    },
+    {
+      "path": "../../../../weatherApp"
+    }
+  ],
   "settings": {
-	"editor.formatOnSave": true,
-	"prettier.singleQuote": true,
-	"javascript.preferences.quoteStyle": "single",
-	"prettier.jsxSingleQuote": true,
-	"typescript.preferences.quoteStyle": "single"
+    "editor.formatOnSave": true,
+    "prettier.singleQuote": true,
+    "javascript.preferences.quoteStyle": "single",
+    "prettier.jsxSingleQuote": true,
+    "typescript.preferences.quoteStyle": "single",
+    "liveServer.settings.multiRootWorkspaceName": "weatherApp"
   }
 }

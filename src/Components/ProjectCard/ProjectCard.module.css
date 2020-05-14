@@ -76,3 +76,25 @@
 
   padding: 5px;
 }
+
+@media (min-width: 1200px) {
+  .project-card {
+    width: 260px;
+  }
+
+  .project-img-wrapper {
+    height: 400px;
+  }
+
+  .project-img-wrapper img {
+    height: 100%;
+  }
+
+  .project-info {
+    height: 200px;
+  }
+
+  .project-tech-wrapper {
+    height: 62px;
+  }
+}
